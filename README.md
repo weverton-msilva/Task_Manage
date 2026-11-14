@@ -28,8 +28,8 @@ A aplicação utiliza uma arquitetura organizada em camadas, integração com ba
 - [X] Filtro por período
 - [X] Validação de dados com Bean Validation
 - [X] Tratamento global de exceções
-- [ ] Documentação da API com Swagger/OpenAPI
-- [ ] Testes automatizados
+- [X] Documentação da API com Swagger/OpenAPI
+- [X] Testes automatizados
 
 > Atualize os indicadores conforme as funcionalidades realmente implementadas.
 
