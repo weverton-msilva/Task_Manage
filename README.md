@@ -20,15 +20,14 @@ A aplicação utiliza uma arquitetura organizada em camadas, integração com ba
 
 ## ✨ Funcionalidades
 
-- [ ] Estrutura inicial da API REST
-- [ ] Operações CRUD de tarefas
-- [ ] Consulta de tarefas por identificador
-- [ ] Filtro de tarefas por status
-- [ ] Filtro por prioridade
-- [ ] Filtro por período
-- [ ] Paginação e ordenação
-- [ ] Validação de dados com Bean Validation
-- [ ] Tratamento global de exceções
+- [X] Estrutura inicial da API REST
+- [X] Operações CRUD de tarefas
+- [X] Consulta de tarefas por identificador
+- [X] Filtro de tarefas por status
+- [X] Filtro por prioridade
+- [X] Filtro por período
+- [X] Validação de dados com Bean Validation
+- [X] Tratamento global de exceções
 - [ ] Documentação da API com Swagger/OpenAPI
 - [ ] Testes automatizados
 
