@@ -9,6 +9,9 @@ import com.dev.taskmanage.model.TaskStatus;
 import com.dev.taskmanage.repository.TaskRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -69,6 +72,15 @@ public class TaskService {
     @Transactional(readOnly = true)
     public List<TaskResponseDTO> findByPriority(TaskPriority priority) {
         return taskRepository.findByPriority(priority)
+                .stream()
+                .map(this::toResponseDTO)
+                .toList();
+    }
+
+    // Método para listar as tarefas por período
+    @Transactional(readOnly = true)
+    public List<TaskResponseDTO> filterByPeriod(LocalDate createdAt, LocalDate dueDate) {
+        return taskRepository.filterByPeriod(createdAt, dueDate)
                 .stream()
                 .map(this::toResponseDTO)
                 .toList();

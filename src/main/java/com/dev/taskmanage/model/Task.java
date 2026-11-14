@@ -36,16 +36,16 @@ public class Task {
 
     private LocalDate dueDate;
 
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
 
-    private LocalDateTime updatedAt;
+    private LocalDate updatedAt;
 
-    private LocalDateTime completedAt;
+    private LocalDate completedAt;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
-        updatedAt = LocalDateTime.now();
+        createdAt = LocalDate.now();
+        updatedAt = LocalDate.now();
 
         if (status == null) {
             status = TaskStatus.TODO;
@@ -58,6 +58,6 @@ public class Task {
 
     @PreUpdate
     protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
+        updatedAt = LocalDate.now();
     }
 }

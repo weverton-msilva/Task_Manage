@@ -6,7 +6,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public record TaskRequestDTO(
         @NotBlank(message = "O título precisa está preenchido.")
@@ -23,5 +22,5 @@ public record TaskRequestDTO(
         TaskPriority priority,
 
         LocalDate dueDate,
-        LocalDateTime completedAt
+        LocalDate completedAt
 ) {}
