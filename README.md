@@ -227,8 +227,7 @@ Durante o desenvolvimento, são explorados conceitos importantes do desenvolvime
 
 **SEU NOME**
 
-- GitHub: [@SEU-USUARIO](https://github.com/SEU-USUARIO)
-- LinkedIn: [Seu perfil](https://linkedin.com/in/SEU-PERFIL)
+- GitHub: [@weverton.msilva](https://github.com/weverton.msilva)
 
 ---
 
