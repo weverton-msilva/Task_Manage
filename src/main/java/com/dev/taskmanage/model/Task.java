@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "task")
@@ -36,6 +35,7 @@ public class Task {
 
     private LocalDate dueDate;
 
+    @Column(nullable = false, updatable = false)
     private LocalDate createdAt;
 
     private LocalDate updatedAt;
@@ -44,8 +44,10 @@ public class Task {
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDate.now();
-        updatedAt = LocalDate.now();
+        LocalDate today = LocalDate.now();
+
+        createdAt = today;
+        updatedAt = today;
 
         if (status == null) {
             status = TaskStatus.TODO;

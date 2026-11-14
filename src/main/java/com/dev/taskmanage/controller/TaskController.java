@@ -77,4 +77,18 @@ public class TaskController {
 
         return ResponseEntity.ok(responseDTO);
     }
+
+    // Endpoint 7: Alterar informações da tarefa
+    @PutMapping("/{id}")
+    public ResponseEntity<TaskResponseDTO> changeTask(@PathVariable Long id, @RequestBody TaskRequestDTO dto) {
+        return ResponseEntity.ok(taskService.changeTask(id, dto));
+    }
+
+    // Endpoint 8: Deletar tarefa cadastrada
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
+        taskService.deleteTask(id);
+
+        return ResponseEntity.noContent().build();
+    }
 }

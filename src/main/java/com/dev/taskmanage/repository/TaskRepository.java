@@ -19,5 +19,5 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
     List<Task> findByPriority(TaskPriority priority);
 
     // Filtro tarefas por período
-    List<Task> filterByPeriod(LocalDate createdAt, LocalDate dueDate);
+    List<Task> findByCreatedAtBetween(LocalDate createdAt, LocalDate dueDate);
 }

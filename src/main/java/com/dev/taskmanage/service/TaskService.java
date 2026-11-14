@@ -34,6 +34,10 @@ public class TaskService {
         task.setDueDate(dto.dueDate());
         task.setCompletedAt(dto.completedAt());
 
+        if (dto.status() == TaskStatus.COMPLETED) {
+            task.setCompletedAt(LocalDate.now());
+        }
+
         Task savedTask = taskRepository.save(task);
 
         return toResponseDTO(savedTask);
@@ -78,10 +82,35 @@ public class TaskService {
     // Método para listar as tarefas por período
     @Transactional(readOnly = true)
     public List<TaskResponseDTO> filterByPeriod(LocalDate createdAt, LocalDate dueDate) {
-        return taskRepository.filterByPeriod(createdAt, dueDate)
+        return taskRepository.findByCreatedAtBetween(createdAt, dueDate)
                 .stream()
                 .map(this::toResponseDTO)
                 .toList();
+    }
+
+    // Método para alterar informações da tarefa
+    public TaskResponseDTO changeTask(Long id, TaskRequestDTO dto) {
+        Task task = taskRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Tarefa não encontrada"));
+
+        task.setTitle(dto.title());
+        task.setDescription(dto.description());
+        task.setStatus(dto.status());
+        task.setPriority(dto.priority());
+        task.setDueDate(dto.dueDate());
+        task.setCompletedAt(dto.completedAt());
+
+        Task savedTask = taskRepository.save(task);
+
+        return toResponseDTO(savedTask);
+    }
+
+    // Método para deletar tarefa cadastrada
+    public void deleteTask(Long id) {
+        Task task = taskRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Tarefa não encontrada"));
+
+        taskRepository.delete(task);
     }
 
     // Converte Entity em DTO de resposta
