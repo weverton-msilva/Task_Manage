@@ -204,7 +204,6 @@ mvn clean verify
 
 - Implementação de filtros dinâmicos.
 - Inclusão de paginação e ordenação.
-- Documentação interativa com Swagger.
 - Ampliação da cobertura de testes.
 - Containerização da aplicação com Docker.
 - Implementação de autenticação e autorização.
@@ -225,10 +224,9 @@ Durante o desenvolvimento, são explorados conceitos importantes do desenvolvime
 
 ## 👨‍💻 Autor
 
-**SEU NOME**
+**WEVERTON MARTINS**
 
-- GitHub: [@SEU-USUARIO](https://github.com/SEU-USUARIO)
-- LinkedIn: [Seu perfil](https://linkedin.com/in/SEU-PERFIL)
+- GitHub: [@weverton.msilva](https://github.com/weverton.msilva)
 
 ---
 
