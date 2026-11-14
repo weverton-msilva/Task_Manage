@@ -225,7 +225,7 @@ Durante o desenvolvimento, são explorados conceitos importantes do desenvolvime
 
 ## 👨‍💻 Autor
 
-**SEU NOME**
+**WEVERTON MARTINS**
 
 - GitHub: [@weverton.msilva](https://github.com/weverton.msilva)
 
