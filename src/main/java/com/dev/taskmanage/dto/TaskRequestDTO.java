@@ -1,6 +1,5 @@
 package com.dev.taskmanage.dto;
 
-import com.dev.taskmanage.model.Task;
 import com.dev.taskmanage.model.TaskPriority;
 import com.dev.taskmanage.model.TaskStatus;
 import jakarta.validation.constraints.NotBlank;
