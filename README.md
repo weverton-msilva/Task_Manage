@@ -204,7 +204,6 @@ mvn clean verify
 
 - Implementação de filtros dinâmicos.
 - Inclusão de paginação e ordenação.
-- Ampliação da cobertura de testes.
 - Containerização da aplicação com Docker.
 - Implementação de autenticação e autorização.
 
